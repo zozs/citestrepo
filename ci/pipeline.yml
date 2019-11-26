@@ -1,0 +1,15 @@
+---
+resources:
+- name: citestrepo
+  type: git
+  source:
+    uri: https://github.com/zozs/citestrepo
+    branch: master
+
+jobs:
+- name: compilerun
+  plan:
+  - get: citestrepo
+    trigger: true
+  - task: compilerun
+    file: citestrepo/ci/compilerun.yml

@@ -1,0 +1,13 @@
+---
+image_resource:
+  type: docker-image
+  source:
+    repository: debian
+    tag: 10
+
+inputs:
+- name: citestrepo
+
+run:
+  path: ./compilerun.sh
+  dir: citestrepo/ci
